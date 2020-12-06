@@ -1,0 +1,767 @@
+            @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700');
+            @import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+            @import url('https://fonts.googleapis.com/css?family=Lato:400,300,700');
+            body {
+                /* background: url("../images/bg.jpg");*/
+                background-color: #ffffff;
+                background-repeat: no-repeat;
+                /*
+        background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+        /* background: linear-gradient(to right, #414345, #232526); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                margin: 0%;
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            
+            header nav {
+                margin: 0% 0% 0% 0%;
+                overflow: hidden;
+                background-color: #ffffff;
+                background-image: linear-gradient(315deg, #ffffff 0%, #b0bac5 74%);
+                padding: 0.5% 0%;
+                width: 100%;
+            }
+            
+            #logo {
+                display: inline-block;
+            }
+            /* The company logo */
+            
+            #logo a {
+                text-decoration: none;
+            }
+            
+            #logo h3 {
+                color: #ffffff;
+                font: normal 36px 'Open Sans', cursive;
+                margin: 0;
+                text-decoration: none;
+            }
+            
+            #logo h3 span {
+                color: lightseagreen;
+                text-decoration: none;
+            }
+            /*search-box*/
+            
+            .wrap {
+                display: inline-block;
+                padding-left: 20%;
+            }
+            
+            .wrap .search input[type="text"] {
+                display: inline;
+                border: none;
+                border-bottom: 1.3px solid rgb(190, 187, 187);
+                background: transparent;
+                outline: none;
+                color: #000;
+                opacity: 0.9;
+                font-size: 120%;
+            }
+            
+            .search .searchButton {
+                display: inline;
+                padding: 0%;
+                margin: 0%;
+                margin: 0px;
+                padding-left: 0%;
+                border-radius: 20%;
+                background: transparent;
+                outline: transparent;
+                border: transparent;
+                font-size: 120%;
+            }
+            
+            .searchButton span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+            
+            .searchButton:hover {
+                text-shadow: 1px 1px 1px black, 0 0 2px blue, 0 0 2px darkblue;
+            }
+            
+            .searchButton span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20%;
+                transition: 0.5s;
+            }
+            
+            .searchButton:hover span {
+                padding-right: 50%;
+            }
+            
+            .searchButton:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+            /* header links */
+            
+            header nav .links {
+                /* display: inline-block; */
+                padding-left: 10%;
+                margin: 1% 5% 0% 2%;
+                float: right;
+            }
+            
+            header nav .links a {
+                display: inline;
+                color: black;
+                text-align: center;
+                margin-left: 20px;
+                padding: 12px 5px 12px 5px;
+                text-decoration: none;
+                font-size: 120%;
+                background: transparent;
+            }
+            
+            .login,
+            .signup {
+                display: inline;
+                color: black;
+                text-align: center;
+                margin-left: 20px;
+                background: transparent;
+                /* padding: 12px 5px 12px 5px; */
+                text-decoration: none;
+                font-size: 120%;
+                background: transparent;
+                background: transparent;
+                outline: transparent;
+                border: transparent;
+            }
+            
+            .login:hover,
+            .signup:hover {
+                color: tomato;
+                cursor: pointer;
+            }
+            
+            header nav .links a :hover {
+                color: tomato;
+            }
+            
+            header nav .links p {
+                display: inline;
+            }
+            
+            input#number {
+                text-align: center;
+                border: none;
+                background: transparent;
+                margin: 0px;
+                width: 40px;
+                height: 40px;
+                visibility: hidden;
+            }
+            
+            header .aside-top {
+                display: inline;
+                /* background: #0aa847; */
+                /* width: 30%; */
+                /* height: 50%; */
+                padding: 0%;
+                /* margin: 5% 5% 5% 5%; */
+            }
+            
+            header .aside-top .mySlides {
+                /* margin: 5% 0% 5% 10%; */
+                /* padding: 0px 5px  ; */
+                opacity: 1;
+                overflow: auto;
+                width: 100%;
+                height: 400px;
+            }
+            
+            header .category-nav {
+                background-image: linear-gradient(315deg, #ffffff 0%, #1875da 74%);
+                background-color: #2d3436;
+                background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+            }
+            
+            .category-nav a {
+                padding: 5%;
+                text-decoration: none;
+                display: inline;
+                color: rgb(255, 255, 255);
+                font-size: 120%;
+            }
+            
+            .category-nav a:hover {
+                color: #ff0066
+            }
+            /* Full-width input fields */
+            
+            .modal input[type=text],
+            .modal input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            /* Set a style for all buttons */
+            
+            .modal button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+            
+            .modal button:hover {
+                opacity: 0.8;
+            }
+            /* Extra styles for the cancel button */
+            
+            .modal .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+            /* Center the image and position the close button */
+            
+            .modal .imgcontainer-box {
+                text-align: center;
+                margin: 24px 0 12px 0;
+                position: relative;
+            }
+            
+            .modal img.avatar {
+                width: 40%;
+                border-radius: 5%;
+            }
+            
+            .modal .container-box {
+                padding: 16px;
+            }
+            
+            .modal span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+            /* The Modal (background) */
+            
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 1;
+                /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 50%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: hidden;
+                /* Black w/ opacity */
+                padding-top: 60px;
+                margin-left: 30%;
+            }
+            /* Modal Content/Box */
+            
+            .modal .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto;
+                /* 5% from the top, 15% from the bottom and centered */
+                outline: transparent;
+                border: transparent;
+                border-radius: 3%;
+                width: 80%;
+                box-shadow: 0 20px 10px #999595;
+                /* Could be more or less, depending on screen size */
+            }
+            /* The Close Button (x) */
+            
+            .modal .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
+            
+            .modal .close:hover,
+            .modal .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+            /* Add Zoom Animation */
+            
+            .modal .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+            }
+            
+            @-webkit-keyframes animatezoom {
+                from {
+                    -webkit-transform: scale(0)
+                }
+                to {
+                    -webkit-transform: scale(1)
+                }
+            }
+            
+            @keyframes animatezoom {
+                from {
+                    transform: scale(0)
+                }
+                to {
+                    transform: scale(1)
+                }
+            }
+            /* Change styles for span and cancel button on extra small screens */
+            
+            @media screen and (max-width: 300px) {
+                .modal span.psw {
+                    display: block;
+                    float: none;
+                }
+                .modal .cancelbtn {
+                    width: 100%;
+                }
+            }
+            /* Main Page */
+            /* About U s */
+            
+            .left {
+                display: block;
+                /* background: #0aa847; */
+                width: 20%;
+                height: 100%;
+                padding: 0% 0.5% 0% 0.5%;
+                float: left;
+                clear: both;
+            }
+            
+            h1 {
+                font-size: 250%;
+                text-align: center;
+                padding: 0%;
+                margin-bottom: 1%;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+            main .left img {
+                width: 100%;
+                height: 150vh;
+                display: inline-block;
+                /* margin: auto; */
+                /* margin-top: 30px;
+            margin-bottom: 30px; */
+                /* border: 2px solid black; */
+            }
+            
+            .products {
+                display: flex;
+                flex-wrap: wrap;
+                /* float: right; */
+            }
+            
+            .product-card {
+                flex: 1 30%;
+                padding: 2%;
+                box-shadow: 0 5px 20px #dfdfdf;
+                margin: 1%;
+            }
+            
+            .badge {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 700;
+                /* background: red; */
+                color: #fff;
+                padding: 3px 10px;
+            }
+            
+            .product-tumb {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* height: 300px; */
+                /* padding: 50px; */
+                background: #f0f0f0;
+            }
+            
+            .product-tumb img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            
+            .product-details {
+                padding: 30px;
+            }
+            
+            .product-catagory {
+                display: block;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #ccc;
+                margin-bottom: 18px;
+            }
+            
+            .product-details h4 a {
+                font-weight: 500;
+                display: block;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+                color: #363636;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            
+            .product-details h4 a:hover {
+                color: #fbb72c;
+            }
+            
+            .product-details p {
+                font-size: 15px;
+                line-height: 22px;
+                margin-bottom: 18px;
+                color: #999;
+            }
+            
+            .product-bottom-details {
+                overflow: hidden;
+                border-top: 1px solid #eee;
+                padding-top: 20px;
+            }
+            
+            .product-bottom-details div {
+                float: left;
+                width: 50%;
+            }
+            
+            .product-price {
+                font-size: 18px;
+                color: #fbb72c;
+                font-weight: 600;
+            }
+            
+            .product-price small {
+                font-size: 80%;
+                font-weight: 400;
+                text-decoration: line-through;
+                display: inline-block;
+                margin-right: 5px;
+            }
+            
+            .product-links {
+                text-align: right;
+            }
+            
+            .product-links a,
+            #increase {
+                display: inline-block;
+                margin-left: 5px;
+                color: #b1aaaa;
+                transition: 0.3s;
+                font-size: 17px;
+            }
+            
+            .product-links a:hover {
+                color: #fd0909;
+            }
+            
+            .product-links #increase :hover {
+                cursor: pointer;
+                color: #fd0909;
+            }
+            /* about us */
+            /* footer */
+            
+            .footer-distributed {
+                background: #666;
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                text-align: left;
+                font: bold 16px sans-serif;
+                padding: 5% 5%;
+            }
+            
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: inline-block;
+                vertical-align: top;
+            }
+            /* Footer left */
+            
+            .footer-distributed .footer-left {
+                width: 40%;
+            }
+            /* The company logo */
+            
+            .footer-distributed h3 {
+                color: #ffffff;
+                font: normal 36px 'Open Sans', cursive;
+                margin: 0;
+            }
+            
+            .footer-distributed h3 span {
+                color: lightseagreen;
+            }
+            /* Footer links */
+            
+            .footer-distributed .footer-links {
+                color: #ffffff;
+                margin: 20px 0 12px;
+                padding: 0;
+            }
+            
+            .footer-distributed .footer-links a {
+                display: inline-block;
+                line-height: 1.8;
+                font-weight: 400;
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            .footer-distributed .footer-company-name {
+                color: #222;
+                font-size: 14px;
+                font-weight: normal;
+                margin: 0;
+            }
+            /* Footer Center */
+            
+            .footer-distributed .footer-center {
+                width: 35%;
+            }
+            
+            .footer-distributed .footer-center i {
+                background-color: #33383b;
+                color: #ffffff;
+                font-size: 25px;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 42px;
+                margin: 10px 15px;
+                vertical-align: middle;
+            }
+            
+            .footer-distributed .footer-center i.fa-envelope {
+                font-size: 17px;
+                line-height: 38px;
+            }
+            
+            .footer-distributed .footer-center p {
+                display: inline-block;
+                color: #ffffff;
+                font-weight: 400;
+                vertical-align: middle;
+                margin: 0;
+            }
+            
+            .footer-distributed .footer-center p span {
+                display: block;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 2;
+            }
+            
+            .footer-distributed .footer-center p a {
+                color: lightseagreen;
+                text-decoration: none;
+                ;
+            }
+            
+            .footer-distributed .footer-links a:before {
+                content: "|";
+                font-weight: 300;
+                font-size: 20px;
+                left: 0;
+                color: #fff;
+                display: inline-block;
+                padding-right: 5px;
+            }
+            
+            .footer-distributed .footer-links .link-1:before {
+                content: none;
+            }
+            /* Footer Right */
+            
+            .footer-distributed .footer-right {
+                width: 20%;
+            }
+            
+            .footer-distributed .footer-company-about {
+                line-height: 20px;
+                color: #92999f;
+                font-size: 13px;
+                font-weight: normal;
+                margin: 0;
+            }
+            
+            .footer-distributed .footer-company-about span {
+                display: block;
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            
+            .footer-distributed .footer-icons {
+                margin-top: 25px;
+            }
+            
+            .footer-distributed .footer-icons a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+                background-color: #33383b;
+                border-radius: 2px;
+                font-size: 20px;
+                color: #ffffff;
+                text-align: center;
+                line-height: 35px;
+                margin-right: 3px;
+                margin-bottom: 5px;
+            }
+            /* If you don't want the footer to be responsive, remove these media queries */
+            
+            @media (max-width: 880px) {
+                .footer-distributed {
+                    font: bold 14px sans-serif;
+                }
+                .footer-distributed .footer-left,
+                .footer-distributed .footer-center,
+                .footer-distributed .footer-right {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+                .footer-distributed .footer-center i {
+                    margin-left: 0;
+                }
+            }
+            
+            .row {
+                display: -ms-flexbox;
+                /* IE10 */
+                display: flex;
+                -ms-flex-wrap: wrap;
+                /* IE10 */
+                flex-wrap: wrap;
+                margin: 0 -16px;
+                padding: 5%;
+            }
+            
+            .col-25 {
+                -ms-flex: 25%;
+                /* IE10 */
+                flex: 25%;
+            }
+            
+            .col-50 {
+                -ms-flex: 50%;
+                /* IE10 */
+                flex: 50%;
+            }
+            
+            .col-75 {
+                -ms-flex: 75%;
+                /* IE10 */
+                flex: 75%;
+            }
+            
+            .col-25,
+            .col-50,
+            .col-75 {
+                padding: 0 16px;
+            }
+            
+            .container {
+                background-color: #ffffff;
+                padding: 5px 20px 15px 20px;
+                border: 1px solid lightgrey;
+                border-radius: 1%;
+                box-shadow: 0 5px 20px #dfdfdf;
+            }
+            
+            .row .container input[type=text] {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+            
+            label {
+                margin-bottom: 10px;
+                display: block;
+            }
+            
+            .icon-container {
+                margin-bottom: 20px;
+                padding: 7px 0;
+                font-size: 24px;
+            }
+            
+            .row .container .btn {
+                background-color: #7597f3;
+                color: white;
+                padding: 12px;
+                margin: 10px 0;
+                border: none;
+                width: 100%;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: 17px;
+            }
+            
+            .btn:hover {
+                background-color: #45a049;
+            }
+            
+            a {
+                color: #2c3d4e;
+                text-decoration: none;
+            }
+            
+            hr {
+                border: 1px solid lightgrey;
+            }
+            
+            span.price {
+                float: right;
+                color: grey;
+            }
+            
+            @media (max-width: 800px) {
+                .row {
+                    flex-direction: column-reverse;
+                }
+                .col-25 {
+                    margin-bottom: 20px;
+                }
+            }

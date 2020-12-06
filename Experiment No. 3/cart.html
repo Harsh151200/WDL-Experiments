@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <script src="js/main.js">
+    </script>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html">
+                    <h3>Grocery<span>Bazzar</span></h3>
+                </a>
+            </div>
+            <div class="wrap">
+                <div class="search">
+                    <form action="#">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">
+                         <span><i class="fa fa-search"></i></span>
+                         </button>
+                    </form>
+                </div>
+            </div>
+            <div class="links">
+                <input type="number" id="number" value="0" />
+                <div class='login' onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+                    Login
+                </div>
+                <div class='signup' onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</div>
+                <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+
+                <p id="cart-increment"></p>
+
+
+        </nav>
+        <!-- Login modal -->
+        <div id="id01" class="modal">
+
+
+            <form class="modal-content animate">
+
+                <div class="imgcontainer-box">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                </div>
+                <div class="container-box">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button> <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                </div>
+
+                <div class="container-box" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div id="id02" class="modal">
+
+
+            <form class="modal-content animate">
+
+                <div class="imgcontainer-box">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                </div>
+                <div class="container-box">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Register</button>
+
+                </div>
+
+                <div class="container-box" style="background-color:#f1f1f1;border-radius: 3%;">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+                </div>
+            </form>
+        </div>
+
+        <nav class="category-nav">
+            <a href="offers.html">Daily Offers</a>
+            <a href="vegetable.html">Vegetables</a>
+            <a href="fruits.html">Fruits</a>
+            <a href="dairy-products.html">Dairy</a>
+            <a href="daily-essentials.html">Daily  Essentials</a>
+            <a href="snacks.html">Snacks</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="#">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>Billing Address</h3>
+                                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Alex d'Mallo">
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" id="email" name="email" placeholder="alex@exaple.com">
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                <input type="text" id="adr" name="address" placeholder="542 W, LT road">
+                                <label for="city"><i class="fa fa-institution"></i> City</label>
+                                <input type="text" id="city" name="city" placeholder="Mumbai">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" name="state" placeholder="MH">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" id="zip" name="zip" placeholder="10001">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-50">
+                                <h3>Payment</h3>
+                                <label for="fname">Accepted Cards</label>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                                <label for="cname">Name on Card</label>
+                                <input type="text" id="cname" name="cardname" placeholder="Alex D'Mallo">
+                                <label for="ccnum">Credit card number</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                <label for="expmonth">Exp Month</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Exp Year</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <label>
+                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                  </label>
+                        <input type="submit" value="Continue to checkout" class="btn">
+                    </form>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="container">
+                    <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+                    <p>
+                        <a href="#">Vegetable Basket</a> <span class="price">Rs 235.00</span></p>
+                    <p><a href="#">Milk</a> <span class="price">Rs 235</span></p>
+                    <p>
+                        <a href="#">Berry Pasrty</a> <span class="price">Rs 235.00</span></p>
+                    <p>
+                        <a href="#">Soap</a> <span class="price">Rs 235.00</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:black"><b>Rs. 1000</b></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class=" footer-distributed ">
+
+        <div class="footer-left ">
+
+            <h3>Grocery<span>Bazzar</span></h3>
+
+            <p class="footer-links ">
+                <a href="# " class="link-1 ">Home</a>
+
+                <a href="# ">Blog</a>
+
+                <a href="# ">About</a>
+
+                <a href="# ">Faq</a>
+
+                <a href="# ">Contact</a>
+            </p>
+
+            <p class="footer-company-name ">Company Name © 2020</p>
+        </div>
+
+        <div class="footer-center ">
+
+            <div>
+                <i class="fa fa-map-marker "></i>
+                <p><span>444-Sector</span>Bandra,Mumbai</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone "></i>
+                <p>+1.555.555.5555</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope "></i>
+                <p><a href="mailto:support@company.com ">support@company.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right ">
+
+            <p class="footer-company-about ">
+                <span>About the company</span> Grocery Bazzar Comes with fresh Veggies, Fruits, dairy products, daily essentials and many more.
+            </p>
+
+            <div class="footer-icons ">
+
+                <a href="# "><i class="fa fa-facebook "></i></a>
+                <a href="# "><i class="fa fa-twitter "></i></a>
+                <a href="# "><i class="fa fa-instagram "></i></a>
+                <a href="# "><i class="fa fa-linkedin "></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+
+<body>
+    <!-- <h1>Harsh Patel</h1> -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/ecom-logo.png" alt="Harsh Logo" class="h-logo">
+            </a>
+            <div class="header-right">
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="aside-top">
+            <img src="images/desktop.jpg" alt="slide1" class="mySlides">
+            <img src="images/skills-img.jpg" alt="slide2" class="mySlides">
+            <img src="images/slide-img.png" alt="slide3" class="mySlides">
+        </aside>
+
+        <aside class="aside-bottom">
+            <h1>My Skills </h1>
+            <img src="images/html5.png" alt="html5 logo" class="skills-img">
+            <img src="images/css3.png" alt="css3 logo" class="skills-img">
+            <img src="images/js.png" alt="javascript logo" class="skills-img">
+            <img src="images/php.png" alt="php logo" class="skills-img">
+            <img src="images/mysql.png" alt="mysql logo" class="skills-img">
+            <img src="images/python.png" alt="python logo" class="skills-img">
+
+            <br><br><br><br>
+            <hr>
+
+            <h2>Education</h2>
+            <table>
+                <th>Institute</th>
+                <th>Board/University</th>
+                <th>Grades</th>
+                <tr>
+                    <td>Poorna Prajna High School,Mumbai</td>
+                    <td>SSC(Maharastra Board)</td>
+                    <td>88%</td>
+                </tr>
+                <tr>
+                    <td>SVP Jr. College,Mumbai</td>
+                    <td>HSC(Maharastra Board)</td>
+                    <td>76.6%</td>
+                </tr>
+                <tr>
+                    <td>Universal College of Engineering,Mumbai</td>
+                    <td>Mumbai University</td>
+                    <td>CGPA - 7.83</td>
+                </tr>
+            </table>
+
+            <br><br><br>
+            <hr>
+            <h2>Accomplishments</h2>
+            <div class="participation">
+                <img src="images/sem3-PBL.jpg" alt="2nd runner up at Sem3 PBL exhibition" class="part-img">
+                <img src="images/SIH.jpg" alt="Participated in Internal Hackathon by SIH" class="part-img">
+
+
+            </div>
+
+            <br><br><br>
+            <hr>
+            <h2>Certificates</h2>
+            <!-- <aside class="bottom-aside-right">
+          <button type="button" name="click me">click Me</button>
+        </aside>
+      </aside> -->
+            <div class="certi-div">
+                <ul>
+                    <li>
+                        <a href="images/coursera.pdf" class="certi" target="_blank">
+                Python for Everybody Specialization from University of Michigan offered by coursera
+              </a>
+                    </li>
+                    <li>
+                        <a href="images/html5.pdf" class="certi" target="_blank">
+                HTML5 Course from University of Michigan offered by coursera
+              </a>
+                    </li>
+                    <li>
+                        <a href="images/css.pdf" class="certi" target="_blank">
+                CSS3 from University of Michigan offered by coursera
+              </a>
+                    </li>
+                    <li>
+                        <a href="images/SQL.pdf" class="certi" target="_blank">
+                SQLfor Data Science from University of California,Davis offered by coursera
+              </a>
+                    </li>
+                    <li>
+                        <a href="images/linear-regg.pdf" class="certi" target="_blank">
+                Linear Regression project offered by Coursera Project Network
+              </a>
+                    </li>
+                </ul>
+            </div>
+
+
+    </main>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+
+</html>

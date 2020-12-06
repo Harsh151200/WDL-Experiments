@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <script src="js/main.js">
+    </script>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html">
+                    <h3>Grocery<span>Bazzar</span></h3>
+                </a>
+            </div>
+            <div class="wrap">
+                <div class="search">
+                    <form action="#">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">
+                         <span><i class="fa fa-search"></i></span>
+                         </button>
+                    </form>
+                </div>
+            </div>
+            <div class="links">
+                <input type="number" id="number" value="0" />
+                <div class='login' onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+                    Login
+                </div>
+                <div class='signup' onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</div>
+                <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+
+                <p id="cart-increment"></p>
+
+
+        </nav>
+        <!-- Login modal -->
+        <div id="id01" class="modal">
+
+
+            <form class="modal-content animate">
+
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                </div>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button> <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div id="id02" class="modal">
+
+
+            <form class="modal-content animate">
+
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                </div>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Register</button>
+
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1;border-radius: 3%;">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+                </div>
+            </form>
+        </div>
+        <!-- <div style="float: right;">
+                <img src="images/modal-image.webp" alt="modal image"></div>-->
+
+
+        <nav class="category-nav">
+            <a href="offers.html">Daily Offers</a>
+            <a href="vegetable.html">Vegetables</a>
+            <a href="fruits.html">Fruits</a>
+            <a href="dairy-products.html">Dairy</a>
+            <a href="daily-essentials.html">Daily  Essentials</a>
+            <a href="snacks.html">Snacks</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <aside class="left">
+            <img src="images/snack-side.jpg" alt="sidebar-image">
+        </aside>
+        <h1>Snacks</h1>
+        <hr style="width:70%;opacity: 0.5;">
+        <section class="products">
+            <div class="product-card">
+                <div class="badge"></div>
+                <div class="product-tumb">
+                    <img src="images/cookies.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">Snacks</span>
+                    <h4><a href="">Chocolate Cookies</a></h4>
+                    <p>Crispy Choco Chip cookies</p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small>Rs96.00</small>Rs230.99</div>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <div id="increase" onclick="increaseValue()" value="Increase Value">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="badge"></div>
+                <div class="product-tumb">
+                    <img src="images/dark-chocolate.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">Snacks</span>
+                    <h4><a href="">Dark Chocolate</a></h4>
+                    <p>Exotic dark chocolate</p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small>Rs96.00</small>Rs230.99</div>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <div id="increase" onclick="increaseValue()" value="Increase Value">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="badge"></div>
+                <div class="product-tumb">
+                    <img src="images/chocolate-cake.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">Snacks</span>
+                    <h4><a href="">Chocolate Pastry</a></h4>
+                    <p>Fresh Chocolate pastry </p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small>Rs96.00</small>Rs230.99</div>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <div id="increase" onclick="increaseValue()" value="Increase Value">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="badge"></div>
+                <div class="product-tumb">
+                    <img src="images/berry-cake.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">Snacks</span>
+                    <h4><a href="">Berry Pastry</a></h4>
+                    <p>Fresh mixed Berry Pastry</p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small>Rs96.00</small>Rs230.99</div>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <div id="increase" onclick="increaseValue()" value="Increase Value">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="badge"></div>
+                <div class="product-tumb">
+                    <img src="images/cereals.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">Snacks</span>
+                    <h4><a href="">Cereals</a></h4>
+                    <p>Healthy Cereals </p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small>Rs96.00</small>Rs230.99</div>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <div id="increase" onclick="increaseValue()" value="Increase Value">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="badge"></div>
+                <div class="product-tumb">
+                    <img src="images/mixed-nuts.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">Snacks</span>
+                    <h4><a href="">Mixed Nuts</a></h4>
+                    <p>Healthy and Exotic Nuts</p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small>Rs96.00</small>Rs230.99</div>
+                        <div class="product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <div id="increase" onclick="increaseValue()" value="Increase Value">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>Grocery<span>Bazzar</span></h3>
+
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+
+                <a href="#">Blog</a>
+
+                <a href="#">About</a>
+
+                <a href="#">Faq</a>
+
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Company Name © 2020</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>444-Sector</span>Bandra,Mumbai</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1.555.555.5555</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span> Grocery Bazzar Comes with fresh Veggies, Fruits, dairy products, daily essentials and many more.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+
+        function increaseValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number').value = value;
+            document.getElementById('cart-increment').innerHTML = value;
+        }
+
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
